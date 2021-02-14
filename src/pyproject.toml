@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "PlaySongs"
+version = "2021.1.0.3"
+description = "Play MP# from a directory."
+readme = "README.rst"
+authors = ["Ahmad Ferdaus Abd Razak <ahmad.ferdaus.abd.razak@ni.com>"]
+license = "GPL-2.0-only"
+repository = "https://github.com/fer1035/pypi-playsongs"
+keywords = ["music", "MP3"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+playsound = "^1.2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
