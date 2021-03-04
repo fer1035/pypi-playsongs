@@ -57,6 +57,10 @@ In BASH:
 Changelog
 ---------
 
+2021.1.0.6
+
+- Updated README.
+
 2021.1.0.5
 
 - Updated code to return instead of exit in case of exceptions.
@@ -75,4 +79,4 @@ Changelog
 
 - Initial release.
 
-*Current version: 2021.1.0.5*
+*Current version: 2021.1.0.6*
