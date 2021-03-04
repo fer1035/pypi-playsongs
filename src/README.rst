@@ -52,17 +52,27 @@ In BASH:
 
 .. code-block:: BASH
 
-   python3 -c "playsongs.playsongs import PlaySongs; PlaySongs('/home/username/Music', repeat = 10000000, shuffle = True)"
+   python3 -c "from playsongs.playsongs import PlaySongs; PlaySongs('/home/username/Music', repeat = 10000000, shuffle = True)"
 
 Changelog
 ---------
 
+2021.1.0.5
+
+- Updated code to return instead of exit in case of exceptions.
+
+2021.1.0.4
+
+- Updated typo in README (this file).
+- No code change.
+
 2021.1.0.3
 
-- Removed system exit at the end so it won't kill Python runtime.
+- Removed system exit at the end of the playlist so it won't kill Python runtime.
+- CTRL+C will still kill Python runtime.
 
 2021.1.0.1
 
 - Initial release.
 
-*Current version: 2021.1.0.3*
+*Current version: 2021.1.0.5*
