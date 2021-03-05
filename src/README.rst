@@ -57,6 +57,10 @@ In BASH:
 Changelog
 ---------
 
+2021.1.0.7
+
+- Moved build and publish process to GitHub Actions.
+
 2021.1.0.6
 
 - Updated README.
@@ -79,4 +83,4 @@ Changelog
 
 - Initial release.
 
-*Current version: 2021.1.0.6*
+*Current version: 2021.1.0.7*
