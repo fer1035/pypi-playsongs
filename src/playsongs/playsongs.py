@@ -32,7 +32,8 @@ def PlaySongs(path, repeat = 0, shuffle = False):
                 playsound('{}/{}'.format(path, song))
         
         except KeyboardInterrupt:
-            return 'Stopped'
+            print('Stopped')
+            sys.exit(1)
         
         except Exception as e:
             return str(e)

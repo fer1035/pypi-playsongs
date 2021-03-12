@@ -5,12 +5,14 @@
 Overview
 --------
 
-Play MP3 from a specified directory.
+Play MP3s from a specified directory.
 
 Prerequisites
 -------------
 
-- *playsound* module (installed as a dependency)
+- *Python >= 3.6*
+- *playsound >= 1.2.2* (installed as a dependency)
+- *pyobjc > 7.1* (installed as a dependency)
 - **CAVEAT**: Due to *playsound* limitations, directory and filenames with spaces are not allowed.
 
 Required (Positional) Arguments
@@ -57,6 +59,11 @@ In BASH:
 Changelog
 ---------
 
+2021.1.2.0
+
+- Added pyobcj as a dependency.
+- Reverted keyboard interrupt to exit as return doesn't actually stop playbacks.
+
 2021.1.0.7
 
 - Moved build and publish process to GitHub Actions.
@@ -83,4 +90,4 @@ Changelog
 
 - Initial release.
 
-*Current version: 2021.1.0.7*
+*Current version: 2021.1.2.0*
