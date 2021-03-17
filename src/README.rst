@@ -12,7 +12,7 @@ Prerequisites
 
 - *Python >= 3.6*
 - *playsound >= 1.2.2* (installed as a dependency)
-- *pyobjc > 7.1* (installed as a dependency)
+- *pyobjc >+ 7.1* (installed as a dependency)
 - **CAVEAT**: Due to *playsound* limitations, directory and filenames with spaces are not allowed.
 
 Required (Positional) Arguments
@@ -59,6 +59,10 @@ In BASH:
 Changelog
 ---------
 
+2021.1.3.0
+
+- Used *multiprocessing* to start *playsound* to enable skipping and non-Python-killing keyboard interrupt.
+
 2021.1.2.0
 
 - Added pyobcj as a dependency.
@@ -90,4 +94,4 @@ Changelog
 
 - Initial release.
 
-*Current version: 2021.1.2.0*
+*Current version: 2021.1.3.0*
