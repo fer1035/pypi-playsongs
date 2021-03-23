@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PlaySongs"
-version = "2021.1.3.1"
+version = "2021.1.4.1"
 description = "Play MP3 files from a directory."
 readme = "README.rst"
 authors = ["Ahmad Ferdaus Abd Razak <ahmad.ferdaus.abd.razak@ni.com>"]

@@ -59,6 +59,10 @@ In BASH:
 Changelog
 ---------
 
+2021.1.4.1
+
+- Multiprocessing bugfix. The songs should advance automatically now.
+
 2021.1.3.1
 
 - Updated README.
@@ -98,4 +102,4 @@ Changelog
 
 - Initial release.
 
-*Current version: 2021.1.3.1*
+*Current version: 2021.1.4.1*
