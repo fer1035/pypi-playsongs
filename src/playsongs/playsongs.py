@@ -2,6 +2,7 @@
 
 import os
 import sys
+import re
 import random
 import multiprocessing
 from playsound import playsound
@@ -13,7 +14,7 @@ def PlaySongs(path, repeat = 0, shuffle = False):
         # Create the list of files from a directory of songs.
         file_list = os.listdir(path)
         # Filter list to only include MP3 files.
-        song_list = [i for i in file_list if i.endswith('.mp3')]
+        song_list = ['{}/{}'.format(path, i) for i in file_list if i.endswith('.mp3')]
     except Exception as e:
         return str(e)
 
@@ -21,7 +22,7 @@ def PlaySongs(path, repeat = 0, shuffle = False):
     counter = 0
     play = True
 
-    print('Press ENTER to skip')
+    print('Press CTRL+C for options')
 
     # Play all songs and repeat as necessary.
     while counter <= repeat and play == True:
@@ -34,12 +35,29 @@ def PlaySongs(path, repeat = 0, shuffle = False):
 
             # Play songs.
             for song in song_list:
-                print('Playing: {}/{}...'.format(path, song))
-                p = multiprocessing.Process(target=playsound, args = ('{}/{}'.format(path, song), ))
+                print('Playing: {}...'.format(song))
+                # Start playing.
+                p = multiprocessing.Process(target = playsound, args = (song, ))
                 p.start()
-                # Skip to next song on Enter.
-                input()
-                p.terminate()
+                try:
+                    while True:
+                        if p.exitcode != None:
+                            p.terminate()
+                            break
+                # Invoke controls.
+                except KeyboardInterrupt:
+                    p.terminate()
+                    control = input('Skip() or Exit(x): ')
+                    if control == 'x' or control == 'X':
+                        p.terminate()
+                        play = False
+                        return 'Stopped'
+                    else:
+                        pass
+                except Exception as e:
+                    p.terminate()
+                    play = False
+                    return str(e)
         
         # Stop playback on Ctrl+C.
         except KeyboardInterrupt:
